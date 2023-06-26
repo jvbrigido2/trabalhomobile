@@ -59,14 +59,14 @@ public class MainActivity extends AppCompatActivity {
                         switch (item.getItemId()) {
 
                             case R.id.item_update:
-                                //function for update
+                                //Funcao para atualizar
                                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                                 View v = LayoutInflater.from(MainActivity.this).inflate(R.layout.item_dialog, null, false);
                                 builder.setTitle("Update Item");
                                 final EditText editText = v.findViewById(R.id.etItem);
                                 editText.setText(list.get(position));
 
-                                //set custome view to dialog
+
                                 builder.setView(v);
 
                                 builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
 
                             case R.id.item_del:
-                                //fucntion for del
+
                                 Toast.makeText(MainActivity.this, "Item Deleted", Toast.LENGTH_SHORT).show();
                                 list.remove(position);
                                 arrayAdapter.notifyDataSetChanged();
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                //don't forgot this
+
                 popupMenu.show();
 
             }
